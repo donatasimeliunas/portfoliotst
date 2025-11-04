@@ -20,7 +20,8 @@ const films: Film[] = [
     image: cdn("videography/Theo_Jess/photos/still1.jpg"),
     duration: "1h23'",
     year: "2024 Rūgsėjis",
-    notes: "Mano merginos sesės vestuvės",
+    notes?: "Mano merginos sesės vestuvės"
+
   },
 ]
 
