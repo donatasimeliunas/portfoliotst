@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "YourCustomFont";
+  src: url("https://wonm1ootyrwkizkp.public.blob.vercel-storage.com/Hack-Regular-DQw37mMoXkTB4Mj1RLKR5yh9PTsd8P.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YourCustomFont";
+  src: url("https://wonm1ootyrwkizkp.public.blob.vercel-storage.com/Hack-Bold-XVX5gR7eIGTyv1mg50ku0negqVwOTJ.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YourCustomFont";
+  src: url("https://wonm1ootyrwkizkp.public.blob.vercel-storage.com/Hack-Italic-ABfejNNFWdAumIm5es8EJRx7MUf9oL.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YourCustomFont";
+  src: url("https://wonm1ootyrwkizkp.public.blob.vercel-storage.com/Hack-Regular-DQw37mMoXkTB4Mj1RLKR5yh9PTsd8P.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: "YourCustomFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-link {
+  @apply inline-flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 border-b-2 border-transparent;
+}
+
+.nav-link.active {
+  @apply border-white;
+}
+
+.film-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.film-title {
+  @apply text-lg font-bold mt-2;
+}
+
+.film-details {
+  @apply text-sm space-x-2;
+}
+
+.film-director {
+  @apply text-sm mt-1;
+}
