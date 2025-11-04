@@ -30,12 +30,6 @@ export default function firstiteration() {
 
       <div className="mt-6 flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2">
-          <h2 className="text-xl font-semibold mb-2"> &mdash; Filmavo ir montavo</h2>
-          <ul className="mb-6">
-            <li>Donatas Šimeliūnas</li>
-          </ul>
-        </div>
-        <div className="md:w-1/2">
           <h2 className="text-xl font-semibold mb-2"> &mdash; Informacija</h2>
           <ul>
             <li>
