@@ -16,9 +16,9 @@ const photos = [
 export default function firstiteration() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 mt-4">Théo and Jessica wedding</h1>
+      <h1 className="text-3xl font-bold mb-4 mt-4">Jess and Théo</h1>
       <p className="mb-6">
-        Documentary-style video of my girlfriend's sister's wedding.
+        My girlfriend's sister's wedding.
       </p>
 
       <VideoPlayer src={cdn("videography/Theo_Jess/theo-jess.m3u8")} subtitles={subtitles} />

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { LanguageSwitcher } from "./LanguageSwitcher"
 
-const navigation = [{ name: "Short Films", href: "/short-films" }, { name: "Videos", href: "/videography"}]
+const navigation = [{ name: "Short Films", href: "/short-films" }, { name: "Precious Moments", href: "/videography"}]
 
 export function Navigation() {
   const pathname = usePathname()
@@ -26,11 +26,11 @@ export function Navigation() {
   // Translate navigation items based on language
   const getNavName = (name: string) => {
     if (langPrefix === "/fr") {
-      return name === "Short Films" ? "Courts métrages" : name === "Videos" ? "Vidéos" : name
+      return name === "Short Films" ? "Courts métrages" : name === "Precious Moments" ? "Moments précieux" : name
     } else if (langPrefix === "/en") {
       return name
     } else {
-      return name === "Short Films" ? "Trumpametražiai" : name === "Videos" ? "Video" : name
+      return name === "Short Films" ? "Trumpametražiai" : name === "Precious Moments" ? "Mielos akimirkos" : name
     }
   }
 

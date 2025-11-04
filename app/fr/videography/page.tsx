@@ -16,11 +16,11 @@ type Film = {
 const films: Film[] = [
   {
     id: "theo-jess",
-    title: "Mariage de Jess et Théo",
+    title: "Jess et Théo",
     image: cdn("videography/Theo_Jess/photos/still1.jpg"),
     duration: "1h23'",
     year: "2024 Autumn",
-    notes?: "Vidéo de style documentaire du mariage de la sœur de ma copine"
+    notes?: "Mariage de la sœur de ma copine"
 
   },
 ]

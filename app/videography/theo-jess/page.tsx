@@ -16,39 +16,39 @@ const photos = [
 export default function firstiteration() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 mt-4">Jess et Théo</h1>
+      <h1 className="text-3xl font-bold mb-4 mt-4">Jess ir Théo</h1>
       <p className="mb-6">
-        Mariage de la sœur de ma copine
+        Mano merginos sesės vestuvės
       </p>
 
       <VideoPlayer src={cdn("videography/Theo_Jess/theo-jess.m3u8")} subtitles={subtitles} />
 
       <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-4">Stills</h2>
+        <h2 className="text-xl font-semibold mb-4">Nuotraukos</h2>
         <PhotoGallery photos={photos} />
       </div>
 
-          <div className="mt-6 flex flex-col md:flex-row gap-8">
+      <div className="mt-6 flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2">
-          <h2 className="text-xl font-semibold mb-2"> &mdash; Réalisé par</h2>
+          <h2 className="text-xl font-semibold mb-2"> &mdash; Filmavo ir montavo</h2>
           <ul className="mb-6">
             <li>Donatas Šimeliūnas</li>
           </ul>
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-xl font-semibold mb-2"> &mdash; Informations</h2>
+          <h2 className="text-xl font-semibold mb-2"> &mdash; Informacija</h2>
           <ul>
             <li>
-              <strong>Quand&nbsp;:</strong> Septembre 2024
+              <strong>Kada:</strong> 2024 Rūgsėjis
             </li>
             <li>
-              <strong>Où&nbsp;:</strong> France, près de Bordeaux
+              <strong>Kur:</strong> Prancūzija, netoli Bordeaux
             </li>
             <li>
-              <strong>Qui&nbsp;:</strong> Famille et amis
+              <strong>Kas:</strong> Šeima ir draugai
             </li>
             <li>
-              <strong>Durée&nbsp;:</strong> 1h23'
+              <strong>Trukmė:</strong> 1h23'
             </li>
           </ul>
         </div>

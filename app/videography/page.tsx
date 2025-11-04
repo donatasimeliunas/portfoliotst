@@ -16,21 +16,22 @@ type Film = {
 const films: Film[] = [
   {
     id: "theo-jess",
-    title: "Jess and Théo",
+    title: "Jess ir Théo",
     image: cdn("videography/Theo_Jess/photos/still1.jpg"),
     duration: "1h23'",
-    year: "2024 September",
-    notes?: "My girlfriend's sister's wedding."
+    year: "2024 Rūgsėjis",
+    notes?: "Mano merginos sesės vestuvės"
+
   },
 ]
 
 export default function ShortFilms() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold mb-6">Precious Moments</h1>
+      <h1 className="text-3xl font-bold mb-6">Gyvenimo montažas</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {films.map((film) => (
-          <Link href={`/en/videography/${film.id}`} key={film.id} className="block">
+          <Link href={`/videography/${film.id}`} key={film.id} className="block">
             <div className="flex flex-col h-full">
               <div className="relative w-full aspect-[16/9] overflow-hidden">
                 <Image
