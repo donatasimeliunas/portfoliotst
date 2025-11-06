@@ -4,3 +4,25 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.vercel
+.env*.local
+node_modules
+
+
+# dependencies
+node_modules
+
+# next / build
+.next
+out
+dist
+.turbo
+
+# vercel
+.vercel
+
+# env / logs / macOS
+.env*
+!.env.example
+*.log
+.DS_Store
