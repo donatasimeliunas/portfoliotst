@@ -4,7 +4,10 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { LanguageSwitcher } from "./LanguageSwitcher"
 
-const navigation = [{ name: "Short Films", href: "/short-films" }, { name: "Precious Moments", href: "/videography"}]
+const navigation = [
+  { name: "Short Films", href: "/short-films" },
+  { name: "Precious Moments", href: "/videography" },
+]
 
 export function Navigation() {
   const pathname = usePathname()
@@ -12,16 +15,17 @@ export function Navigation() {
   // Determine current language from URL
   const getLangPrefix = () => {
     const pathParts = pathname.split("/")
-    if (pathParts[1] === "en" || pathParts[1] === "fr") {
+    if (pathParts[1] === "en" || pathParts[1] === "fr" || pathParts[1] === "lt") {
       return `/${pathParts[1]}`
     }
-    return ""
+    // Default to Lithuanian prefix
+    return "/lt"
   }
 
   const langPrefix = getLangPrefix()
 
   // Get the current path without language prefix for active state calculation
-  const pathWithoutLang = pathname.replace(/^\/(en|fr)/, "")
+  const pathWithoutLang = pathname.replace(/^\/(en|fr|lt)/, "")
 
   // Translate navigation items based on language
   const getNavName = (name: string) => {
@@ -37,22 +41,29 @@ export function Navigation() {
   return (
     <nav className="bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex space-x-8">
-            <Link href={`${langPrefix}/`} className={`nav-link ${pathWithoutLang === "/" ? "active" : ""}`}>
-              {langPrefix === "/fr" ? "Accueil" : langPrefix === "/en" ? "Home" : "Pradžia"}
+        <div className="flex items-center gap-2 py-2">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 whitespace-nowrap text-sm md:gap-x-4 md:text-base">
+            <Link
+              href={`${langPrefix}/about`}
+              className={`nav-link text-[clamp(12px,2vw+10px,16px)] ${
+                pathWithoutLang === "/about" || pathWithoutLang === "" ? "active" : ""
+              }`}
+            >
+              {langPrefix === "/fr" ? "À propos" : langPrefix === "/en" ? "About" : "Apie"}
             </Link>
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={`${langPrefix}${item.href}`}
-                className={`nav-link ${pathWithoutLang.startsWith(item.href) ? "active" : ""}`}
+                className={`nav-link text-[clamp(12px,2vw+10px,16px)] ${
+                  pathWithoutLang.startsWith(item.href) ? "active" : ""
+                }`}
               >
                 {getNavName(item.name)}
               </Link>
             ))}
           </div>
-          <div className="flex items-center">
+          <div className="ml-auto whitespace-nowrap">
             <LanguageSwitcher />
           </div>
         </div>
