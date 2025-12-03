@@ -9,7 +9,7 @@ const featuredFilm = {
   duration: "3'20''",
   year: "Automne 2024",
   category: "Fiction",
-  notes: "Expériences en réalité augmentée et animation 3D.",
+  notes: "Explorations en réalité augmentée et animation 3D.",
 }
 
 export default function FrenchAbout() {
